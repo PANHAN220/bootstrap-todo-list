@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>To-Do List</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+<div class="container py-5">
+  <div class="todo-card mx-auto">
+    <h3 class="mb-3">Boostrap To-Do List</h3>
+
+    <!-- Add Task -->
+    <form id="todoForm" class="d-flex gap-2 mb-3">
+      <input id="taskInput" class="form-control" placeholder="What do you want to do?">
+
+      <!-- Priority -->
+      <select id="priorityInput" class="form-select priority-select">
+        <option value="low">Low</option>
+        <option value="medium" selected>Medium</option>
+        <option value="high">High</option>
+      </select>
+
+      <button class="btn btn-primary">Add</button>
+    </form>
+
+    <!-- Search -->
+    <input id="searchInput" class="form-control mb-3" placeholder="Search task...">
+
+    <!-- Filters -->
+    <div class="btn-group mb-3 w-100" role="group" aria-label="Filters">
+      <button class="btn btn-outline-secondary filter-btn active" data-filter="all">All</button>
+      <button class="btn btn-outline-secondary filter-btn" data-filter="active">Active</button>
+      <button class="btn btn-outline-secondary filter-btn" data-filter="completed">Completed</button>
+    </div>
+
+    <!-- Task List -->
+    <ul id="taskList" class="list-group mb-3"></ul>
+
+    <!-- Footer -->
+    <div class="d-flex justify-content-between align-items-center text-muted">
+      <span id="counter"></span>
+      <button id="clearCompleted" class="btn btn-sm btn-outline-danger">
+        Clear Completed
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Edit Modal -->
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content modal-round">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editModalLabel">Edit Task</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <form id="editForm">
+        <div class="modal-body">
+          <input type="hidden" id="editId">
+
+          <div class="mb-3">
+            <label class="form-label">Task title</label>
+            <input id="editTitle" class="form-control" placeholder="Edit task title..." required>
+          </div>
+
+          <div class="mb-2">
+            <label class="form-label">Priority</label>
+            <select id="editPriority" class="form-select">
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button class="btn btn-primary">Save changes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

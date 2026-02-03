@@ -1,0 +1,146 @@
+body {
+  background: #e8fff8;
+  font-family: "SN Pro", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.todo-card {
+max-width: 720px;            
+  width: min(92vw, 720px);     
+  background: #fff;
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.btn-primary {
+  background: #5ed1b2;
+  border: none;
+}
+.btn-primary:hover {
+  background: #4db9a0;
+}
+
+.priority-select {
+  width: 120px;
+}
+
+.list-group-item {
+  border-radius: 12px;
+  margin-bottom: 10px;
+  border: none;
+  background: #f8fffd;
+}
+
+.task-title.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.task-badge {
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 0.75rem;
+}
+
+.badge-low {
+  background: #caffbf;
+  color: #1f4d2a;
+} 
+
+.badge-medium {
+  background: #fdffb6;
+  color: #5a5400;
+} 
+
+.badge-high {
+  background: #ffd6a5;
+  color: #6b3b00;
+} 
+
+.icon-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+}
+
+.btn-done {
+  background: #bde0fe;
+}
+.btn-edit {
+  background: #bdb2ff;
+}
+.btn-del {
+  background: #ffadad;
+}
+
+.btn-done:hover,
+.btn-edit:hover,
+.btn-del:hover {
+  filter: brightness(0.95);
+}
+
+.modal-round {
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.task-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 8px 27px rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+.task-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.task-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #2F3E46;
+}
+
+.task-title.completed {
+  text-decoration: line-through;
+  opacity: 0.55;
+}
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.list-group-item {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.icon-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  font-size: 1.05rem;
+}
+
+.task-card:hover {
+  transform: translateY(-1px);
+  transition: 0.15s ease;
+}
+
